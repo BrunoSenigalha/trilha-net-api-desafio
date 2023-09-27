@@ -34,7 +34,6 @@ namespace TrilhaApiDesafio.Controllers
         {
             // IMPLEMENTADO
             var tarefa = _context.Tarefas;
-
             return Ok(tarefa);
         }
 
@@ -46,7 +45,6 @@ namespace TrilhaApiDesafio.Controllers
 
             // IMPLEMENTADO
             var tarefa = _context.Tarefas.Where(x => x.Titulo == titulo);
-
             return Ok(tarefa);
         }
 
@@ -101,7 +99,6 @@ namespace TrilhaApiDesafio.Controllers
             // IMPLEMENTADO
             _context.Tarefas.Update(tarefaBanco);
             _context.SaveChanges();
-
             return Ok(tarefaBanco);
         }
 
@@ -116,7 +113,6 @@ namespace TrilhaApiDesafio.Controllers
             // IMPLEMENTADO
             _context.Tarefas.Remove(tarefaBanco);
             _context.SaveChanges();
-
             return NoContent();
         }
     }
